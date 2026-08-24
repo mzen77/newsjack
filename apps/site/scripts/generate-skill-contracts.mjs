@@ -5,6 +5,7 @@ const siteRoot = resolve(import.meta.dirname, "..");
 const repoRoot = resolve(siteRoot, "../..");
 const files = {
   ethics: "skills/ETHICS.md",
+  "why-not-spam": "skills/WHY-NOT-SPAM.md",
   "relevance-coarse-filter": "skills/relevance-coarse-filter/SKILL.md",
   "angle-generator": "skills/angle-generator/SKILL.md",
 };

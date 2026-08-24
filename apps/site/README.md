@@ -1,9 +1,9 @@
 # Newsjack site and web app
 
 Next.js site, installer host, and form-based Newsjack web app for the
-`mzen77/newsjack` fork. Browser traffic on `/` redirects to the fork; the SaaS
-starts at `/app`; installer user agents on `/` receive the bundled shell
-installer.
+`mzen77/newsjack` fork. Browser traffic on `/` receives the product landing
+page; the SaaS starts at `/app`; installer user agents on `/` receive the
+bundled shell installer.
 
 ## Requirements
 

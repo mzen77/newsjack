@@ -51,6 +51,7 @@ export function buildSkillPrompt(
   input: WorkflowRunInput,
   contract: string,
   ethics: string,
+  antiSpam: string,
 ): string {
   return [
     "Execute the canonical Newsjack skill below as a form workflow.",
@@ -59,6 +60,9 @@ export function buildSkillPrompt(
     "",
     "CANONICAL ETHICAL FLOOR",
     ethics,
+    "",
+    "CANONICAL ANTI-SPAM DOCTRINE",
+    antiSpam,
     "",
     "CANONICAL SKILL CONTRACT",
     contract,
@@ -75,6 +79,7 @@ export async function runProviderWorkflow(
   input: WorkflowRunInput,
   contract: string,
   ethics: string,
+  antiSpam: string,
 ): Promise<WorkflowRunResult> {
   const apiKey = process.env.NEWSJACK_AI_API_KEY;
   const model = process.env.NEWSJACK_AI_MODEL;
@@ -98,7 +103,7 @@ export async function runProviderWorkflow(
       messages: [
         {
           role: "user",
-          content: buildSkillPrompt(input, contract, ethics),
+          content: buildSkillPrompt(input, contract, ethics, antiSpam),
         },
       ],
       temperature: 0.2,

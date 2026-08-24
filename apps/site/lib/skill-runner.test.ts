@@ -28,10 +28,12 @@ test("runner prompt contains the canonical contract and grounded inputs", () => 
     input,
     "# Relevance Coarse Filter\nReturn one evidence-bound decision.",
     "# ETHICS\nDo not invent facts.",
+    "# WHY-NOT-SPAM\nVolume borrows from future trust.",
   );
 
   assert.match(prompt, /# Relevance Coarse Filter/);
   assert.match(prompt, /Do not invent facts/);
+  assert.match(prompt, /Volume borrows from future trust/);
   assert.match(prompt, /2026-08-24T14:54:00.000Z/);
   assert.match(prompt, /https:\/\/example\.com\/reporting\/ai-audit-rules/);
 });

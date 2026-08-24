@@ -115,6 +115,7 @@ export async function runWorkflowAction(formData: FormData): Promise<void> {
             input,
             contractFor(slug),
             skillContracts.ethics,
+            skillContracts["why-not-spam"],
           );
     await completeJob(
       jobId,
