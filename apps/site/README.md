@@ -39,6 +39,7 @@ This fork can also publish a public preview from the repo-root `netlify.toml`:
 - Build: `pnpm install --frozen-lockfile && pnpm build`
 - Publish: `.next`
 - Node: 22
+- Runtime: `@netlify/plugin-nextjs` (needed for `/`, `/install.sh`, and proxy)
 
 Browser requests to `/` redirect to GitHub. Use `/connection-help` to see a
 page, or `curl` `/` / `/install.sh` for the installer.

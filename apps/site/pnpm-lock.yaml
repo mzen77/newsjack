@@ -21,6 +21,9 @@ importers:
         specifier: 19.2.6
         version: 19.2.6(react@19.2.6)
     devDependencies:
+      '@netlify/plugin-nextjs':
+        specifier: ^5.15.13
+        version: 5.15.13
       '@tailwindcss/postcss':
         specifier: 4.3.0
         version: 4.3.0
@@ -364,6 +367,10 @@ packages:
   '@neondatabase/serverless@1.1.0':
     resolution: {integrity: sha512-r3ZZhRjEcfEdKIZnoB1RusNgvHuaBRqfCzV4Gi+5A9yUX0S4HTws/ASWqt13wL4y4I+0rqsWGdA2w7EQXHi3+Q==}
     engines: {node: '>=19.0.0'}
+
+  '@netlify/plugin-nextjs@5.15.13':
+    resolution: {integrity: sha512-gBmWtgG13ZW4ytNMCvacfwZemtdtV/Ekc+6RBYvI5fndjmDvKxgFHylsw7oli+PHMGAtNqaJrN8QccGnDReu6A==}
+    engines: {node: '>=18.0.0'}
 
   '@next/env@16.2.6':
     resolution: {integrity: sha512-gd8HoHN4ufj73WmR3JmVolrpJR47ILK6LouP5xElPglaVxir6e1a7VzvTvDWkOoPXT9rkkTzyCxBu4yeZfZwcw==}
@@ -2287,6 +2294,8 @@ snapshots:
     optional: true
 
   '@neondatabase/serverless@1.1.0': {}
+
+  '@netlify/plugin-nextjs@5.15.13': {}
 
   '@next/env@16.2.6': {}
 
