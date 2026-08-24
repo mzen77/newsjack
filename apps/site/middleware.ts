@@ -11,7 +11,7 @@ import { applySecurityHeaders } from "./lib/security-headers";
 
 const repoURL = "https://github.com/mzen77/newsjack";
 
-export function proxy(request: NextRequest, event: NextFetchEvent) {
+export function middleware(request: NextRequest, event: NextFetchEvent) {
   const userAgent = request.headers.get("user-agent") ?? "";
   const installerKind = getInstallerKind(userAgent);
 
