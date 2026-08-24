@@ -29,6 +29,7 @@ credentials/
 # ─── build outputs ────────────────────────────────────
 .next/
 .vercel/
+.netlify/
 .turbo/
 .cache/
 dist/

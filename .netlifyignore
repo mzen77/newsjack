@@ -1,0 +1,18 @@
+# Keep Netlify uploads small. The hosted build installs its own deps.
+.git
+**/.git
+node_modules
+**/node_modules
+.next
+**/.next
+.netlify
+**/.netlify
+.tmp
+eval
+fixtures
+apps/cli
+harness
+coverage
+dist
+out
+*.log
