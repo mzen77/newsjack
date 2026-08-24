@@ -9,7 +9,7 @@ import {
 } from "./lib/install-telemetry";
 import { applySecurityHeaders } from "./lib/security-headers";
 
-const repoURL = "https://github.com/elvisun/newsjack";
+const repoURL = "https://github.com/mzen77/newsjack";
 
 export function proxy(request: NextRequest, event: NextFetchEvent) {
   const userAgent = request.headers.get("user-agent") ?? "";

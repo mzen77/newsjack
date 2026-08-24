@@ -1,6 +1,8 @@
 import { cpSync, mkdirSync, rmSync } from "node:fs";
 import { join, resolve } from "node:path";
 
+await import("./generate-skill-contracts.mjs");
+
 const siteRoot = resolve(import.meta.dirname, "..");
 const repoRoot = resolve(siteRoot, "../..");
 const publicRoot = join(siteRoot, "public");
