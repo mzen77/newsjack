@@ -8,11 +8,16 @@
   },
   "scripts": {
     "dev": "next dev --port 3000",
+    "predev": "node scripts/generate-skill-contracts.mjs",
     "prebuild": "node scripts/prebuild-dist.mjs",
     "build": "next build",
+    "preview:cloudflare": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy:cloudflare": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "start": "next start",
     "lint": "eslint . --max-warnings=0",
-    "test": "node --test"
+    "prelint": "node scripts/generate-skill-contracts.mjs",
+    "pretest": "node scripts/generate-skill-contracts.mjs",
+    "test": "node --experimental-strip-types --test 'lib/*.test.ts'"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
@@ -22,11 +27,12 @@
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",
-    "next": "16.2.6",
+    "next": "16.3.2",
     "react": "19.2.6",
     "react-dom": "19.2.6"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.20.2",
     "@tailwindcss/postcss": "4.3.0",
     "@types/node": "25.9.0",
     "@types/react": "19.2.14",
@@ -34,6 +40,7 @@
     "eslint": "9.39.4",
     "eslint-config-next": "16.2.6",
     "tailwindcss": "4.3.0",
-    "typescript": "6.0.3"
+    "typescript": "6.0.3",
+    "wrangler": "^4.125.0"
   }
 }

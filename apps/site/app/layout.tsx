@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const title = "newsjack.sh";
+const title = "Newsjack Web — mzen77 fork";
 const description =
-  "The open-source skills that turn your agent into a PR operator.";
+  "A browser workflow app built on Mike's fork of the open-source Newsjack project.";
 const ogImage = {
   url: "/newsjack-og-image.png",
   width: 1497,
   height: 789,
-  alt: "newsjack.sh - The open-source skills that turn your agent into a PR operator.",
+  alt: "Newsjack Web on the mzen77 fork.",
 };
 
 export const metadata: Metadata = {
@@ -18,8 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    url: "https://newsjack.sh",
-    siteName: "newsjack.sh",
+    siteName: "Newsjack Web — mzen77 fork",
     images: [ogImage],
     type: "website",
   },
