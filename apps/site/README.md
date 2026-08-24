@@ -30,6 +30,21 @@ pnpm lint
 pnpm test
 ```
 
+## Hosting
+
+The production domain `newsjack.sh` is a Vercel deployment of `apps/site`.
+This fork can also publish a public preview from the repo-root `netlify.toml`:
+
+- Base directory: `apps/site`
+- Build: `pnpm install --frozen-lockfile && pnpm build`
+- Publish: `.next`
+- Node: 22
+
+Browser requests to `/` redirect to GitHub. Use `/connection-help` to see a
+page, or `curl` `/` / `/install.sh` for the installer.
+
+Telemetry/DB variables are optional. Deploy without them.
+
 ## Telemetry
 
 The site records privacy-limited request events for `newsjack.sh`:

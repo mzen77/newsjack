@@ -1,0 +1,11 @@
+# Host the Next.js installer site from the monorepo.
+# Telemetry/DB env vars are optional; the site works without them.
+
+[build]
+  base = "apps/site"
+  command = "pnpm install --frozen-lockfile && pnpm build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NODE_OPTIONS = "--max-old-space-size=4096"
